@@ -35,12 +35,6 @@ const handleClick = (element) => {
 
 
 
-
-
-
-
-
-
 // this function places the "currentMarker" inside the HTML element that was clicked and calls the "changeMarker" function.
 const addMarker = (id) => {
 
@@ -100,7 +94,7 @@ const resetBoard = () => {
   // =
   // document
   // const
-  const squares = document.getElementsByTagName("td")
+  const squares = document.getElementsByTagName("TD")
   // loops over the HTML Collection of TDs and clears out the Xs and Os
   for (i=0; i < squares.length; i++) {
 
@@ -152,8 +146,8 @@ if((board[0][0] == "X" && board[1][0] == "X" && board[2][0] == "X")
  const diagonalWin = () => {
 if((board[0][0] == "X" && board[1][1] == "X" && board[2][2] == "X") 
 || (board[0][0] == "O" && board[1][1] == "O" && board[2][2] == "O")
-|| (board[2][0] == "X" && board[1][1] == "X" && board[2][0] == "X")
-|| (board[2][0] == "O" && board[1][1] == "O" && board[2][0] == "O")
+|| (board[0][2] == "X" && board[1][1] == "X" && board[2][0] == "X")
+|| (board[0][2] == "O" && board[1][1] == "O" && board[2][0] == "O")
 ){
   return true;
 }}
